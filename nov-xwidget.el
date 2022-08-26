@@ -251,16 +251,6 @@ alternative browser function."
     map)
   "Keymap for `nov-xwidget-webkit-mode-map'.")
 
-(if (featurep 'evil)
-    (if (fboundp 'evil-define-key)
-        (evil-define-key '(normal emacs) nov-xwidget-webkit-mode-map
-          (kbd "n") 'nov-xwidget-next-document
-          (kbd "p") 'nov-xwidget-previous-document
-          (kbd "]") 'nov-xwidget-next-document
-          (kbd "[") 'nov-xwidget-previous-document
-          (kbd "t") 'nov-xwidget-goto-toc
-          (kbd "S") 'nov-xwidget-find-source-file)))
-
 (defun nov-xwidget-header ()
   "Return the string to be used as the nov-xwidget header."
   (let* ((file nov-xwidget-current-file)
